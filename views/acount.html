@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "partials/head.html" %}
+</head>
+<body>
+{% include "partials/header.html" %}
+<div class="col-md-9">
+    <div class="alert alert-danger" role="alert">
+        {{ errMsg }}
+    </div>
+    <div id="changepassword">
+        <h2>Change Password</h2>
+        <form action="" method="post">
+            <div class="form-group">
+                <label>Old password</label>
+                <input type="password" class="form-control" name="oldpass" required>
+            </div>
+            <div class="form-group">
+                <label>New password</label>
+                <input type="password" class="form-control" name="newpass" required>
+            </div>
+            <div class="form-group">
+                <label>Confirm new password</label>
+                <input type="password" class="form-control" name="confirmnewpass" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Change password</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% include "partials/footer.html" %}
+
+{% include "partials/script.html" %}
+</body>
+</html>
